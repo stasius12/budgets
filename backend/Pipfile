@@ -6,8 +6,7 @@ name = "pypi"
 [packages]
 django = "==3.2.9"
 djangorestframework = "*"
-
-[dev-packages]
+psycopg2 = "*"
 
 [requires]
 python_version = "3.9"

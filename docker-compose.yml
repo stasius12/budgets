@@ -6,6 +6,10 @@ services:
     environment:
       - POSTGRES_PASSWORD=postgres_pass
       - POSTGRES_USER=postgres_user
+      - POSTGRES_DB=budgets
+    volumes:
+    - db_data:/var/lib/postgresql/data
+
   web:
     container_name: web
     build: backend
@@ -14,5 +18,10 @@ services:
       - ./backend:/app
     ports:
      - "8000:8000"
+    env_file:
+      - backend/.env
     depends_on:
      - db
+
+volumes:
+  db_data:

@@ -6,6 +6,11 @@ The budget consists of income and expenses. They are grouped into categories
 
 ## Local setup
 
+* create .env
+```shell
+cp backend/.env.example backend/.env
+```
+
 * build and run all services
 ```shell
 docker-compose up -d --build
