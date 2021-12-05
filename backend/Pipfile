@@ -7,6 +7,10 @@ name = "pypi"
 django = "==3.2.9"
 djangorestframework = "*"
 psycopg2 = "*"
+pytest = "*"
+pytest-django = "*"
+factory-boy = "*"
+pytest-factoryboy = "*"
 
 [requires]
 python_version = "3.9"

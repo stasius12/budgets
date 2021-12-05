@@ -10,7 +10,7 @@ class User(AbstractUser):
 
 
 class BudgetItemCategory(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, unique=True)
     type = models.IntegerField(
         choices=BudgetItemType.choices, default=BudgetItemType.EXPENSE
     )
