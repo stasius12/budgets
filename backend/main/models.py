@@ -25,6 +25,7 @@ class BudgetItemCategory(models.Model):
 class Budget(models.Model):
     name = models.CharField(max_length=100)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+
     description = models.TextField(
         blank=True, help_text=_("Description and purpose for creating this budget.")
     )
@@ -43,6 +44,8 @@ class BudgetItem(models.Model):
 
     name = models.CharField(max_length=255)
     value = models.DecimalField(max_digits=10, decimal_places=2)
+    budget = models.ForeignKey(Budget, on_delete=models.CASCADE)
+
     type = models.IntegerField(
         choices=BudgetItemType.choices, default=BudgetItemType.EXPENSE
     )
