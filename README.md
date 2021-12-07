@@ -22,3 +22,9 @@ docker-compose exec web python manage.py migrate
 ```
 
 * open http://localhost:8000 in the browser
+
+
+## Limitiations
+
+**Warning!** For now the default user is created automatically and there is no authentication.
+App allows to create budgets, see them and remove them.
