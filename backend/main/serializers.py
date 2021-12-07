@@ -25,6 +25,8 @@ class BudgetItemSerializer(serializers.ModelSerializer):
 
 
 class BudgetSerializer(serializers.ModelSerializer):
+    budgetitem_set = BudgetItemSerializer(many=True, read_only=True)
+
     class Meta:
         model = models.Budget
         fields = (
@@ -32,4 +34,5 @@ class BudgetSerializer(serializers.ModelSerializer):
             "name",
             "user",
             "description",
+            "budgetitem_set",
         )

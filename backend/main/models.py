@@ -61,4 +61,4 @@ class BudgetItem(models.Model):
     )
 
     def __str__(self):
-        return f"{self.name} - {self.value} {self.currency} <{self.category.name}>"
+        return f"{self.name} - {self.value} {self.currency}"
